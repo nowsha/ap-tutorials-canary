@@ -18,7 +18,7 @@ spec:
         istio: monitor
     spec:
       containers:
-        - image: nowshahri/istiocanary:v1
+        - image: nowshahri/istiocanary:v1mini
           imagePullPolicy: Always
           name: second-app
           env:

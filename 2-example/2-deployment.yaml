@@ -18,7 +18,7 @@ spec:
         istio: monitor
     spec:
       containers:
-        - image: aputra/myapp-lesson155:latest
+        - image: nowshahri/istiocanary:v1
           imagePullPolicy: Always
           name: myapp
           env:
