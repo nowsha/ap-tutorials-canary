@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: second-app-monitor
+  namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: second-app
+  serviceMonitorNamespaceSelector: 
+    matchNames:
+      - production
+  endpoints:
+  - port: 8080 
+    portName: http
+    path: /metrics
+    interval: 10s
+    scrapeTimeout: 10s
+    
