@@ -4,6 +4,8 @@ kind: Service
 metadata:
   name: second-app
   namespace: production
+  labels:
+    app: second-app
   annotations:
     prometheus.io/scrape: "true"
     prometheus.io/port: "8080"
