@@ -1,15 +1,16 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: First-app-monitor
+  name: first-app-monitor
   namespace: monitoring
 spec:
   selector:
     matchLabels:
-      app: First-app
+      app: first-app
   namespaceSelector: 
     matchNames:
       - staging
+      - backend
   endpoints:
   - port: http
     path: /metrics

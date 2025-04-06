@@ -4,6 +4,8 @@ kind: Service
 metadata:
   name: first-app
   namespace: staging
+  labels:
+    app: first-app
 spec:
   ports:
     - name: http
